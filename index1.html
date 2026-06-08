@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AR Dua Gunung & Matahari</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0px; overflow: hidden;">
 
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+        
+        <a-marker preset="hiro">
+            
+            <a-cone position="-0.8 0.5 -0.5" 
+                    radius-bottom="0.8" 
+                    radius-top="0" 
+                    height="1.2" 
+                    material="color: #2e7d32; roughness: 0.8;">
+            </a-cone>
+
+            <a-cone position="0.8 0.5 -0.5" 
+                    radius-bottom="0.8" 
+                    radius-top="0" 
+                    height="1.2" 
+                    material="color: #388e3c; roughness: 0.8;">
+            </a-cone>
+
+            <a-sphere position="-0.5 1.2 -0.8" 
+                      radius="0.2" 
+                      material="color: #ffeb3b; shader: flat;"
+                      animation="property: position; to: 0.5 1.2 -0.8; loop: true; dir: alternate; dur: 4000; easing: linear">
+            </a-sphere>
+            
+        </a-marker>
+        
+        <a-entity camera></a-entity>
+        
+    </a-scene>
+
+</body>
+</html>
